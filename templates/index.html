@@ -23,7 +23,7 @@
       
         {% block body %}
         <div class="section" id="splash">
-                <h1>{% block htmltitle %}{{ config.title }}{% endblock htmltitle %} </h1>
+                <h1>{{ config.title }}</h1>
                 {% if config.extra.sam_menu %}
                     {% for link in config.extra.sam_menu %}
                         <div class="big-link">
