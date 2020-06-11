@@ -10,8 +10,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="referrer" content="no-referrer">
 
+        {% block css}
         <link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
         <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+        {% endblock css}
+        
 
         <title>{% block htmltitle %}{{ config.title }}{% endblock htmltitle %}</title>
 
@@ -27,7 +30,7 @@
                 {% if config.extra.sam_menu %}
                     {% for link in config.extra.sam_menu %}
                         <div class="big-link">
-                            <a href="{{ link.link }}">
+                            <a href="{{ link.link | replace(from="$BASE_URL", to=config.base_url) }}">
                                 {{ link.text }}
                             </a>
                         </div>
