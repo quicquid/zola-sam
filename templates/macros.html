@@ -15,7 +15,7 @@
         <p>
             {% if config.extra.sam_menu and config.extra.sam_bottom_menu %}
                 {% for link in config.extra.sam_menu %}
-                    <a href="{{ link.link }}">{{ link.text }}</a>
+                    <a href="{{ link.link  | replace(from="$BASE_URL", to=config.base_url) }}">{{ link.text }}</a>
                     &#183;
                 {% endfor %}
             {% elif config.extra.sam_bottom_menu %}
