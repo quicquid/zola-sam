@@ -22,7 +22,7 @@
             <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml') }}">
         {% endif %}
     </head>
-    <body {% if config.extra.sam_background %}style="background-image: url('{{get_url(path={{config.extra.sam_background}})}}')" {% endif %}>
+    <body {% if config.extra.sam_background %}style="background-image: url('{{get_url(path=config.extra.sam_background)}}')" {% endif %}>
       
         {% block body %}
         <div class="section" id="splash">
