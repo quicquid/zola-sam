@@ -11,8 +11,8 @@
         <meta name="referrer" content="no-referrer">
 
         {% block css %}
-        <link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
-        <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+        <link rel="stylesheet" href="{{ get_url(path='fonts.css') | safe }}">
+        <link rel="stylesheet" href="{{ get_url(path='style.css') | safe }}">
         {% endblock css %}
         
 
@@ -22,7 +22,7 @@
             <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml') }}">
         {% endif %}
     </head>
-    <body {% if config.extra.sam_background %}style="background-image: url('{{get_url(path="/img/background.jpg")}}')" {% endif %}>
+    <body {% if config.extra.sam_background %}style="background-image: url('{{get_url(path="/img/background.jpg") | safe }}')" {% endif %}>
       
         {% block body %}
         <div class="section" id="splash">
