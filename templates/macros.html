@@ -26,7 +26,7 @@
                     &#183;
                 {% endfor %}
             {% endif %}
-            <a href="{{ config.base_url }}">
+            <a href="{{ config.base_url | safe }}">
                 {{ config.extra.home | default(value="home") | safe }}
             </a>
         </p>
