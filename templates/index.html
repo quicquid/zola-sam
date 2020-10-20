@@ -40,7 +40,7 @@
                         {% set current = get_section(path=current) %}
                         <div class="big-link">
                             <a href="{{ current.permalink }}">
-                                {{ macros::title_or_last(component=current) }}
+                                {{ macros::title_or_last(component=current) | safe }}
                             </a>
                         </div>
                     {% endfor %}
