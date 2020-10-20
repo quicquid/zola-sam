@@ -34,7 +34,7 @@
             <div class="tag-container">
                 {% for tag in page.taxonomies.tags %}
                     <span class="tag">
-                        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">
+                        <a href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}">
                             {{ tag }}
                         </a>
                     </span>

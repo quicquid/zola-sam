@@ -11,7 +11,7 @@
 {% block content %}
 <ul>
     {% for tag in terms %}
-        <li><a href="{{ tag.permalink }}">{{ tag.name }}</a></li>
+        <li><a href="{{ tag.permalink | safe }}">{{ tag.name }}</a></li>
     {% endfor %}
 </ul>
 {% endblock content %}
