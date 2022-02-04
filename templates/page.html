@@ -8,6 +8,7 @@
 
 {% block title %}
     {{ page.title }}
+    <hr/>
 {% endblock title %}
 
 {% block content %}
@@ -41,7 +42,6 @@
                 {% endfor %}
             </div>
         {% endif %}
-        <hr/>
     {% endif %}
     {{ page.content | safe }}
 {% endblock content %}
