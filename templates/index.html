@@ -13,8 +13,9 @@
         {% block css %}
         <link rel="stylesheet" href="{{ get_url(path='fonts.css') | safe }}">
         <link rel="stylesheet" href="{{ get_url(path='style.css') | safe }}">
+        <link rel="stylesheet" href="{{ get_url(path='perfundo.with-icons.css') | safe }}">
+{#        <link rel="stylesheet" href="{{ get_url(path='index.css') | safe }}">  #}
         {% endblock css %}
-        
 
         <title>{% block htmltitle %}{{ config.title }}{% endblock htmltitle %}</title>
 
